@@ -2,12 +2,14 @@ package com.Music.Music.Controller;
 
 import com.Music.Music.DTO.TestDTO;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/Music")
 public class testController {
     TestDTO testDTO;
-    @GetMapping("/Music/hello")
+    @GetMapping("/hello")
     public TestDTO test(){
         System.out.println("Build react");
         testDTO = new TestDTO();
